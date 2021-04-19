@@ -1,0 +1,176 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+
+html, body {
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  color: $mainFontColor;
+  background-color: white;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+h1 {
+  font-family: $mainFontMedium;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  color: $default-color;
+}
+
+h2 {
+  font-family: $mainFont;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: $mainFontMedium;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  color: #313444;
+}
+
+h4 {
+  font-family: $mainFontMedium;
+  font-size: 20px;
+  line-height: 1;
+  text-align: left;
+  color: #313444;
+}
+
+p {
+  font-family: $mainFont;
+  font-size: 20px;
+  line-height: $mainLineHeight;
+  text-align: center;
+  color: #313444;
+
+}
+
+section {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 54px;
+  position: relative;
+  border-radius: 44px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-family: $mainFontMedium;
+  font-size: 24px;
+  background-color: #2f344f;
+
+
+  span {
+    background: -webkit-linear-gradient(#16DB60, #00C2F9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    background: linear-gradient(90deg, #00F5A0 0%, #00D9F5 100%);
+    border-radius: 44px;
+  }
+}
+
+.bg-color {
+  background-color: $dark-color;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1130px;
+  margin: auto;
+}
+
+.bg-radial {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(50% 50% at 50% 50%, #4D5D6C 0%, #1F214D 100%);
+  filter: blur(250px);
+  z-index: -1;
+}
+
+.bg-light {
+  background-color: $light-color;
+}
+
+.link {
+  font-family: $mainFontMedium;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  color: $success-color;
+}
